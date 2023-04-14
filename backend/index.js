@@ -41,10 +41,10 @@ app.get('/sports', async (req,res)=>{
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/notes',require('./routes/notes'))
 
-// if(process.env.NODE_ENV === 'production'){
-//   app.use(express.static('client/build'));
-//   app.get('*', (res, req)=>res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')))
-// }
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static('../build'));
+  app.get('*', (res, req)=>res.sendFile(path.resolve(__dirname,  'build', 'index.html')))
+}
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
