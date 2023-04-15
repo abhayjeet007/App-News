@@ -23,7 +23,7 @@ export default function Notes() {
     {
       navigate("/login")
     }
-  }, []);
+  }, [navigate, getNotes]);
   const ref = useRef(null);
   const refClose = useRef(null);
   const updateNote = (currentNote) => {
