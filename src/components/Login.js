@@ -14,7 +14,7 @@ function Login(props) {
         setLoading({loading:true})
         props.setprogress(10);
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/auth/login", {
+        const response = await fetch("https://world-affairs-2hnd.onrender.com/api/auth/login", {
             method: 'POST',
             headers: {
               'content-Type': 'application/json',

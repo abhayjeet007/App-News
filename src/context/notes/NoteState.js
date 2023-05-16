@@ -3,7 +3,7 @@ import { useState } from "react";
 // import Notes from "../../components/Notes";
 import NoteContext from "./noteContext";
 const NoteState = (props) => {
-  const host = "http://localhost:5000"
+  const host = "https://world-affairs-2hnd.onrender.com/"
   const notesInitial =[]
   const [notes, setNotes] = useState(notesInitial)
   // const [authtoken1,setAuthtoken1]=useState("")
