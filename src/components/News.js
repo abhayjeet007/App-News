@@ -30,7 +30,7 @@ export class News extends Component {
       this.setState({loading:true})
       this.props.setprogress(10);
       // let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=c7f26f9d54f04d6183557cd8658b8168&page=${this.state.page}&pageSize=12`
-      let url=`http://localhost:5000/${this.props.category}`
+      let url=`https://world-affairs-2hnd.onrender.com/${this.props.category}`
         let data= await fetch(url)
         console.log(BASE_URL)
       this.props.setprogress(50);
@@ -52,7 +52,7 @@ export class News extends Component {
         
         
       // let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=c7f26f9d54f04d6183557cd8658b8168&page=${this.state.page-1}&pageSize=12`
-      let url=`http://localhost:5000/${this.props.category}`
+      let url=`https://world-affairs-2hnd.onrender.com/${this.props.category}`
       let data= await fetch(url)
       this.props.setprogress(50);
 
@@ -73,7 +73,7 @@ export class News extends Component {
 
 
           console.log("next")
-          let url=`http://localhost:5000/${this.props.category}`
+          let url=`https://world-affairs-2hnd.onrender.com/${this.props.category}`
           // let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=c7f26f9d54f04d6183557cd8658b8168&page=${this.state.page+1}&pageSize=12`
         let data= await fetch(url)
       this.props.setprogress(50);
